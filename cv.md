@@ -7,3 +7,20 @@ I enjoy learning new things. I find joy in work that benefits others or has a fu
 
 #### Knowledges
 * Basic: HTML,JS,Python,Django,DRF,Java,OOP,Linux,Git,SQL_
+
+##### Code example
+```javascript
+function validateQuantity(input, cel_id) {
+    var cell = document.getElementById(cel_id);
+
+    var regex = /[+\-*\/]/;                  
+    if (input.charAt(0) === '0' || regex.test(input.charAt(0))) {
+        cell.style.backgroundColor = "yellow";
+        alert("проверь данные")
+    } else if (isNaN(input) || !Number.isInteger(parseFloat(input))) {
+        cell.style.backgroundColor = "red";
+        alert("это точно число?")
+    } else {
+        cell.style = "none";
+    }
+}
